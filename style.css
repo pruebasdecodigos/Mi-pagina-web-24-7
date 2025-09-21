@@ -161,3 +161,69 @@ footer {
   color: white;
   margin-top: 30px;
 }
+
+/* ========================== */
+/*     RESPONSIVE DESIGN      */
+/* ========================== */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  nav {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+  .slider-container {
+    width: 95%;
+  }
+  .slider img {
+    height: 250px;
+  }
+  .card {
+    padding: 18px;
+    margin: 15px;
+  }
+  .side-by-side {
+    flex-direction: column;
+    text-align: center;
+  }
+  .side-by-side img {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  table, th, td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  nav a {
+    margin: 5px 0;
+    font-size: 0.85em;
+  }
+  .slider img {
+    height: 200px;
+  }
+  .mini-cards {
+    gap: 8px;
+  }
+  .mini-card {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+  footer {
+    font-size: 0.85em;
+  }
+}
+
