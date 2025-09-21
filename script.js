@@ -32,3 +32,12 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     }
   });
 });
+
+function ajustarEspacio() {
+  const header = document.querySelector("header");
+  const banner = document.querySelector("#banner");
+  const headerHeight = header.offsetHeight;
+  banner.style.marginTop = headerHeight + "px";
+}
+window.addEventListener("load", ajustarEspacio);
+window.addEventListener("resize", ajustarEspacio);
