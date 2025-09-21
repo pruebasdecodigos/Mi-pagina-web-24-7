@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 180px;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
   padding: 0;
   background: #fdf6e3;
   color: #333;
-  padding-top: 160px;
 }
 
 header {
@@ -21,7 +21,6 @@ header {
   color: white;
   border-bottom: 5px solid #ffeb3b;
 }
-
 .header-content {
   text-align: center;
   padding: 20px;
@@ -52,7 +51,6 @@ nav a:hover {
   color: white;
   text-decoration: underline;
 }
-
 .menu-icon {
   display: none;
   font-size: 28px;
@@ -60,7 +58,6 @@ nav a:hover {
   color: #ffeb3b;
   margin-left: auto;
 }
-
 .nav-links {
   display: flex;
 }
@@ -115,9 +112,17 @@ nav a:hover {
   max-height: 500px;
   object-fit: cover;
 }
+
 @media (max-width: 768px) {
+  #banner {
+    height: auto;
+    padding: 20px 10px;
+  }
+  .slider-container {
+    width: 95%;
+  }
   .slider img {
-    max-height: 300px;
+    max-height: 280px;
   }
 }
 
@@ -153,7 +158,6 @@ nav a:hover {
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
-
 .side-by-side {
   flex-direction: row;
   align-items: center;
@@ -164,6 +168,15 @@ nav a:hover {
 }
 .side-by-side img {
   max-width: 40%;
+}
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-content img {
+    max-width: 90%;
+  }
 }
 
 .mini-cards {
@@ -216,59 +229,4 @@ footer {
   background: #00695c;
   color: white;
   margin-top: 30px;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  /* Header y menú */
-  header {
-    text-align: center;
-    padding: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin: 0;
-  }
-
-  /* Imágenes dentro de secciones */
-  section img {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    margin: 15px auto;
-    display: block;
-  }
-
-  /* Contenido de texto */
-  section {
-    padding: 20px 15px;
-    text-align: justify;
-  }
-
-  /* Para que no se vea tan vacío en vertical */
-  section.banner {
-    padding: 40px 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Aún más compacto en pantallas pequeñas */
-  h1, h2, h3 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-
-  nav ul {
-    gap: 5px;
-  }
-
-  section img {
-    width: 100%;
-    max-width: 350px;
-  }
 }
