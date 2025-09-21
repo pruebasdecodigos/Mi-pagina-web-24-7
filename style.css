@@ -8,7 +8,7 @@ body {
   padding: 0;
   background: #fdf6e3;
   color: #333;
-  padding-top: 160px; 
+  padding-top: 160px;
 }
 
 header {
@@ -36,7 +36,7 @@ header p {
 
 nav {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
   background: #004d40;
   padding: 12px 20px;
