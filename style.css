@@ -17,6 +17,9 @@ header {
   padding: 30px 20px;
   text-align: center;
   border-bottom: 5px solid #ffeb3b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 header h1 {
   margin: 0;
@@ -29,18 +32,31 @@ header p {
 /* NAV */
 nav {
   background: #004d40;
+  position: sticky;
+  top: 100px; /* debajo del header */
+  z-index: 999;
   padding: 12px;
-  text-align: center;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 nav a {
   color: #ffeb3b;
-  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
 nav a:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #ffeb3b;
+  cursor: pointer;
+  text-align: right;
 }
 
 /* BANNER */
@@ -138,10 +154,14 @@ nav a:hover {
 }
 
 /* TABLE */
+.table-container {
+  overflow-x: auto;
+}
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  min-width: 300px;
 }
 th, td {
   border: 1px solid #777;
@@ -170,19 +190,11 @@ footer {
   header h1 {
     font-size: 1.8em;
   }
-  nav {
-    font-size: 0.9em;
-    padding: 8px;
-  }
   .slider-container {
     width: 95%;
   }
   .slider img {
     height: 250px;
-  }
-  .card {
-    padding: 18px;
-    margin: 15px;
   }
   .side-by-side {
     flex-direction: column;
@@ -192,9 +204,16 @@ footer {
     max-width: 100%;
     margin-top: 15px;
   }
-  table, th, td {
-    font-size: 0.9em;
-    padding: 8px;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    background: #004d40;
+  }
+  .menu-toggle {
+    display: block;
   }
 }
 
@@ -202,28 +221,14 @@ footer {
   header h1 {
     font-size: 1.5em;
   }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-  nav a {
-    margin: 5px 0;
-    font-size: 0.85em;
-  }
   .slider img {
     height: 200px;
   }
-  .mini-cards {
-    gap: 8px;
-  }
-  .mini-card {
-    font-size: 0.9em;
-    padding: 10px;
+  table, th, td {
+    font-size: 0.85em;
+    padding: 6px;
   }
   footer {
     font-size: 0.85em;
   }
 }
-
