@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- IMPORTANTE PARA RESPONSIVE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto de Investigación - Falta de disciplina en el deporte</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,13 +19,16 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#banner">Banner</a> |
-    <a href="#inicio">Inicio</a> |
-    <a href="#problema">Problema</a> |
-    <a href="#objetivos">Objetivos</a> |
-    <a href="#desarrollo">Desarrollo</a> |
-    <a href="#conclusiones">Conclusiones</a> |
-    <a href="#bibliografia">Bibliografía</a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-links" id="nav-links">
+      <a href="#banner">Banner</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#problema">Problema</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#desarrollo">Desarrollo</a>
+      <a href="#conclusiones">Conclusiones</a>
+      <a href="#bibliografia">Bibliografía</a>
+    </div>
   </nav>
 
   <!-- BANNER -->
@@ -88,24 +91,26 @@
         puede llevar a la frustración, al bajo rendimiento y a la deserción de actividades físicas.
       </p>
       <p>La siguiente tabla muestra los principales efectos de la falta de disciplina:</p>
-      <table>
-        <tr>
-          <th>Aspectos Negativos</th>
-          <th>Consecuencias</th>
-        </tr>
-        <tr>
-          <td>Falta de compromiso en entrenamientos</td>
-          <td>Bajo rendimiento deportivo</td>
-        </tr>
-        <tr>
-          <td>Ausencia de hábitos de autocontrol</td>
-          <td>Mayor riesgo de lesiones</td>
-        </tr>
-        <tr>
-          <td>Desorganización en la práctica</td>
-          <td>Abandono del deporte</td>
-        </tr>
-      </table>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Aspectos Negativos</th>
+            <th>Consecuencias</th>
+          </tr>
+          <tr>
+            <td>Falta de compromiso en entrenamientos</td>
+            <td>Bajo rendimiento deportivo</td>
+          </tr>
+          <tr>
+            <td>Ausencia de hábitos de autocontrol</td>
+            <td>Mayor riesgo de lesiones</td>
+          </tr>
+          <tr>
+            <td>Desorganización en la práctica</td>
+            <td>Abandono del deporte</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -141,4 +146,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
